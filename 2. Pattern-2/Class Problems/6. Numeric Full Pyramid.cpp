@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+  int n;
+  cout << "Enter Input";
+  cout << endl;
+  cin >> n;
+
+  for (int i = 0; i < n; i++) {
+    int count = i + 1;
+
+    for (int j = 0; j < n + i; j++) {
+      if (j < n - i - 1)
+        cout << "  ";
+      else {
+        if (j < n) {
+          cout << count << " ";
+          count++;
+
+        } else {
+          cout << count - 2 << " ";
+          count--;
+        }
+      }
+    }
+    cout << endl;
+  }
+}
